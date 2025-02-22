@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.List;
 
 public class RegistryEditor extends JFrame {
-    private static final String REG_PATH = "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Overwolf";
+    private static final String REG_PATH = "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\SXP\\Settings\\Install";
     private static final String REG_KEY = "SysPath";
 
     private JComboBox<String> pathDropdown;
@@ -22,20 +22,20 @@ public class RegistryEditor extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
 
-        // 1️⃣ Button zum Laden der Config-Datei
+        // Button zum Laden der Config-Datei
         selectFileButton = new JButton("Config-Datei auswählen");
         selectFileButton.addActionListener(e -> selectConfigFile());
 
-        // 2️⃣ Dropdown (wird erst nach Dateiauswahl befüllt)
+        // Dropdown (wird erst nach Dateiauswahl befüllt)
         pathDropdown = new JComboBox<>();
         pathDropdown.setEnabled(false);
 
-        // 3️⃣ Button zum Ändern der Registry (deaktiviert, bis Datei gewählt wurde)
+        // Button zum Ändern der Registry (deaktiviert, bis Datei gewählt wurde)
         applyButton = new JButton("SysPath ändern");
         applyButton.setEnabled(false);
         applyButton.addActionListener(e -> updateRegistry());
 
-        // 4️⃣ Status-Anzeige
+        // Status-Anzeige
         statusLabel = new JLabel("Bitte eine Config-Datei auswählen.");
 
         // GUI-Elemente hinzufügen
