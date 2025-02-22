@@ -2,7 +2,7 @@
 
 ## 📥 Installation & Start
 
-- Klicke rechts auf "Releases" und downloade die "RegEditor.zip"
+- Klicke rechts auf "Releases" und downloade die "RegEdit.zip"
 - ZIP-Datei entpacken an einen beliebigen Ort  
 
 ## 🛠 Nutzung
